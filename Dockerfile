@@ -15,6 +15,9 @@ RUN curl -L -o /tmp/activator.zip \
   ln -s /opt/activator/activator-${ACTIVATOR_VERSION}-minimal/bin/activator /usr/bin/activator && \
   rm -rf /tmp/* /var/cache/apk/*
 
+#SBT
+RUN apk add --update sbt
+
 # Git
 RUN apk add --update git
 
